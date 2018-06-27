@@ -28,14 +28,15 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston",
   reverse = stops.reverse
 
   #9 How many ways can we return "Falkirk High" from the array?
-  # I am unsure how to answer this...
+  stops[3]
+
+  array.slice(3)
+
+  array.fetch(3)
+
+  array.at(3)
 
   #10 prints stops as a for loop
   for stop in stops
     p stop
   end
-  p index
-
-  p count
-
-  p reverse
