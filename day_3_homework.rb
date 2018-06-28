@@ -115,11 +115,11 @@ p users ["Erik"][:pets][0][:species]
 #5 get the smallest of Erik's lottery numbers.
 p users ["Erik"][:lottery_numbers][2]
 
-#6
- nums = users ["Avril"][:lottery_numbers]
-  if nums / 2 == 0
-    p nums
-  end
+# #6
+#  nums = users ["Avril"][:lottery_numbers]
+#   if nums / 2 == 0
+#     p nums
+#   end
 
 #7
 p users ["Erik"][:lottery_numbers].push(7)
@@ -135,3 +135,43 @@ p users ["Erik"][:pets]<< {
 
 #10
 p users ["Euan"] = "new_user"
+
+#Exercise C.
+
+united_kingdom = [
+  {
+    name: "Scotland",
+    population: 5295000,
+    capital: "Edinburgh"
+  },
+  {
+    name: "Wales",
+    population: 3063000,
+    capital: "Swansea"
+  },
+  {
+    name: "England",
+    population: 53010000,
+    capital: "London"
+  }
+]
+
+#1
+p united_kingdom [1][:capital] = "Cardiff"
+
+#2
+p united_kingdom << {
+    name: "Northern Ireland",
+    population: 1811000,
+    capital: "Belfast"
+}
+
+#3
+for countries in united_kingdom
+  p countries [:name]
+end
+
+#4
+for countries in united_kingdom
+  p countries [:population]
+end
