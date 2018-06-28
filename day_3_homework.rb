@@ -1,4 +1,4 @@
-# #Exercise A
+# # #Exercise A
 #
 # stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston",
 #   "Haymarket" ]
@@ -30,11 +30,11 @@
 #   #9 How many ways can we return "Falkirk High" from the array?
 #   stops[3]
 #
-#   array.slice(3)
+#   stops.slice(3)
 #
-#   array.fetch(3)
+#   stops.fetch(3)
 #
-#   array.at(3)
+#   stops.at(3)
 #
 #   #10 prints stops as a for loop
 #   for stop in stops
@@ -99,4 +99,40 @@ users = {
   }
 }
 
-p users["Jonathan"[:twitter]]
+#1 get Jonathan's twitter handle.
+p users ["Jonathan"][:twitter]
+
+
+#2 get Erik's home town.
+p users ["Erik"][:home_town]
+
+#3 get Erik's lottery lottery numbers.
+p users ["Erik"][:lottery_numbers]
+
+#4 get the type of Avril's pet monty.
+p users ["Erik"][:pets][0][:species]
+
+#5 get the smallest of Erik's lottery numbers.
+p users ["Erik"][:lottery_numbers][2]
+
+#6
+p users ["Avril"][:lottery_numbers][0..3]
+
+#7
+p users ["Erik"][:lottery_numbers].push(7)
+
+#8
+p users ["Erik"][:home_town] = "Edinburgh"
+
+#9
+p users ["Erik"][:pets]<< {
+  :name => "Fluffy",
+  :species => "Dog"
+}
+
+#10
+p users << {
+  "Euan" => {
+    :home_town => "Prestonpans"
+  },
+}
